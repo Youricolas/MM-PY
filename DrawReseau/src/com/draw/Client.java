@@ -11,12 +11,14 @@ import java.util.Scanner;
  */
 public class Client {
 
-   public static void main(String[] args) {
+   private static Scanner sc;
+
+public static void main(String[] args) {
       
       final Socket clientSocket;
       final BufferedReader in;
       final PrintWriter out;
-      final Scanner sc = new Scanner(System.in);//pour lire à partir du clavier
+      sc = new Scanner(System.in);
   
       try {
          /*
