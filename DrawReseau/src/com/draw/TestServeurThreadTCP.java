@@ -4,7 +4,7 @@ import java.net.*;
 import java.io.*;
 
 public class TestServeurThreadTCP extends Thread {
-	final static int port = 9632;
+	final static int port = 9652;
 	private Socket socket;
 	public static void main(String[] args) {
 		try {
