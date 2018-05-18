@@ -27,7 +27,7 @@ public static void main(String[] test) {
        in = new BufferedReader (new InputStreamReader (clientSocket.getInputStream()));
        Thread envoi= new Thread(new Runnable() {
           String msg;
-          @Override
+         
           public void run() {
              while(true){
                 msg = sc.nextLine();
@@ -40,18 +40,18 @@ public static void main(String[] test) {
    
        Thread recevoir= new Thread(new Runnable() {
           String msg ;
-          @Override
+          
           public void run() {
              try {
                 msg = in.readLine();
-                //tant que le client est connecté
+               
                 while(msg!=null){
                    System.out.println("Client : "+msg);
                    msg = in.readLine();
                 }
-                //sortir de la boucle si le client a déconecté
+               
                 System.out.println("Client déconecté");
-                //fermer le flux et la session socket
+             
                 out.close();
                 clientSocket.close();
                 serveurSocket.close();
